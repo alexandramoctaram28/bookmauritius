@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Mauritius | Mauritius Hotel Reservations</title>
+    <meta
+      name="description"
+      content="Book Mauritius reservations for hotels in Mauritius with WhatsApp booking and automatic commission calculation."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">Book</span>
+        <span class="brand-text">Mauritius</span>
+      </div>
+      <nav class="topnav">
+        <a href="#stays">Stays</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="top-cta" href="https://wa.me/23058023676" target="_blank" rel="noopener noreferrer">WhatsApp: +230 58023676</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Mauritius hotels only</p>
+          <h1>Explore Mauritius stays with instant booking</h1>
+          <p class="subtitle">
+            Browse Mauritius hotel offers, choose your stay, and book through WhatsApp or direct hotel payment.
+            Booking email: <strong>bookmauritius@outlook.com</strong>
+          </p>
+          <div class="trust-row">
+            <span>✔ Mauritius-only listings</span>
+            <span>✔ Auto commission</span>
+            <span>✔ WhatsApp payment</span>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span>10%</span>
+            <small>commission auto-calculated</small>
+          </div>
+          <div>
+            <span>24/7</span>
+            <small>booking support on WhatsApp</small>
+          </div>
+          <div>
+            <span>100%</span>
+            <small>focused on Mauritius hotels</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-bar" id="stays">
+        <label>
+          Destination
+          <input type="text" id="destinationFilter" value="Mauritius" readonly />
+        </label>
+        <label>
+          Check-in
+          <input type="date" id="searchCheckIn" />
+        </label>
+        <label>
+          Guests
+          <select id="searchGuests">
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+          </select>
+        </label>
+        <label>
+          Area
+          <select id="searchArea">
+            <option value="all">All Mauritius</option>
+            <option value="north">North</option>
+            <option value="south">South</option>
+            <option value="port-louis">Port Louis</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="content-grid">
+        <div class="hotel-list-panel">
+          <div class="section-heading">
+            <h2>Recommended stays</h2>
+            <p>Popular Mauritius properties for your reservation.</p>
+          </div>
+          <div id="hotelCards" class="hotel-cards"></div>
+        </div>
+
+        <form id="reservationForm" class="reservation-form" id="booking">
+          <h2>Reservation details</h2>
+
+          <div class="field-grid">
+            <label>
+              Full name
+              <input type="text" id="name" required placeholder="John Doe" />
+            </label>
+
+            <label>
+              Guest phone number
+              <input type="tel" id="phone" required placeholder="+230 5XXXXXXX" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" id="email" required placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Hotel name in Mauritius
+              <input type="text" id="hotelName" required placeholder="Mauritius Hotel" />
+            </label>
+
+            <label>
+              Room rate per night (MUR)
+              <input type="number" id="nightlyRate" min="0" value="4500" required />
+            </label>
+
+            <label>
+              Payment method
+              <select id="paymentMethod" required>
+                <option value="WhatsApp">WhatsApp payment</option>
+                <option value="Hotel direct">Direct at hotel</option>
+              </select>
+            </label>
+
+            <label>
+              Check-in date
+              <input type="date" id="checkIn" required />
+            </label>
+
+            <label>
+              Check-out date
+              <input type="date" id="checkOut" required />
+            </label>
+
+            <label>
+              Guests
+              <select id="guests" required>
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+              </select>
+            </label>
+
+            <label>
+              Room type
+              <select id="roomType" required>
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Suite">Suite</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn">Confirm reservation</button>
+          <a id="whatsappButton" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            Reserve on WhatsApp
+          </a>
+        </form>
+
+        <aside class="status-panel" id="contact">
+          <div id="confirmation" class="confirmation-card">
+            <h3>Reservation summary</h3>
+            <p>Your booking details will appear here after confirmation.</p>
+          </div>
+
+          <div class="saved-reservations">
+            <h3>Recent reservations</h3>
+            <ul id="savedReservations"></ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

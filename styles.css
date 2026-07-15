@@ -1,0 +1,325 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f9fc;
+  --panel: #ffffff;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --accent: #25d366;
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #dbe4ef;
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.15), transparent 25%),
+    linear-gradient(135deg, #e8fbff, #f8fafc);
+  color: var(--text);
+}
+
+.topbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.brand-mark {
+  background: var(--primary);
+  color: white;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.brand-text {
+  color: var(--primary-dark);
+}
+
+.topnav {
+  display: flex;
+  gap: 16px;
+}
+
+.topnav a,
+.top-cta {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.top-cta {
+  background: #dff7ff;
+  color: var(--primary-dark);
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.page-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 20px 48px;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #0f766e, #0ea5e9);
+  border-radius: 24px;
+  color: white;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin: 0 0 10px;
+  font-size: 2.7rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 60ch;
+  opacity: 0.95;
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.trust-row span {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.hero-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-stats div {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.hero-stats span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.search-bar label,
+.field-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input,
+select {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.8fr;
+  gap: 24px;
+}
+
+.hotel-list-panel,
+.reservation-form,
+.confirmation-card,
+.saved-reservations {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.hotel-list-panel,
+.reservation-form {
+  padding: 20px;
+}
+
+.section-heading h2,
+.reservation-form h2,
+.confirmation-card h3,
+.saved-reservations h3 {
+  margin-top: 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.hotel-cards {
+  display: grid;
+  gap: 14px;
+}
+
+.hotel-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #f8fbfd, #eef8ff);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.hotel-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.hotel-card h3 {
+  margin: 0 0 8px;
+}
+
+.hotel-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hotel-price {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.reserve-btn {
+  margin-top: 12px;
+  border: none;
+  background: #dff7ff;
+  color: #0c4a6e;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.primary-btn,
+.whatsapp-btn {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btn:hover,
+.whatsapp-btn:hover,
+.reserve-btn:hover,
+.top-cta:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+.whatsapp-btn {
+  background: var(--accent);
+  margin-top: 12px;
+}
+
+.status-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.confirmation-card,
+.saved-reservations {
+  padding: 20px;
+}
+
+#savedReservations {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+#savedReservations li {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+@media (max-width: 980px) {
+  .topbar,
+  .hero-card,
+  .content-grid,
+  .search-bar,
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topnav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

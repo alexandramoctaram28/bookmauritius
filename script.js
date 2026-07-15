@@ -55,8 +55,6 @@ function buildWhatsAppLink(reservation) {
     `Check-out: ${reservation.checkOut}`,
     `Stay nights: ${reservation.nights}`,
     `Booking total: ${reservation.bookingTotal}`,
-    `Commission: ${reservation.commission}`,
-    `Hotel payout: ${reservation.hotelPayout}`,
     `Payment method: ${reservation.paymentMethod}`,
   ].join('\n');
 
@@ -116,8 +114,7 @@ function renderReservations() {
         <li>
           <strong>${reservation.name}</strong><br />
           ${reservation.hotelName} · ${reservation.roomType}<br />
-          ${reservation.checkIn} → ${reservation.checkOut}<br />
-          Commission: ${reservation.commission}
+          ${reservation.checkIn} → ${reservation.checkOut}
         </li>
       `
     )
@@ -162,8 +159,6 @@ reservationForm.addEventListener('submit', (event) => {
     <p><strong>${reservation.name}</strong>, your ${reservation.roomType.toLowerCase()} room in <strong>${reservation.hotelName}</strong> is reserved for ${reservation.guests} guest(s).</p>
     <p>Stay: ${reservation.checkIn} → ${reservation.checkOut} (${reservation.nights} night(s))</p>
     <p>Booking total: <strong>${reservation.bookingTotal}</strong></p>
-    <p>Commission due: <strong>${reservation.commission}</strong></p>
-    <p>Hotel payout: <strong>${reservation.hotelPayout}</strong></p>
     <p>Payment method: ${reservation.paymentMethod}</p>
     <p>WhatsApp payment number: <strong>+230 58023676</strong></p>
     <p>Booking email: <strong>bookmauritius@outlook.com</strong></p>
